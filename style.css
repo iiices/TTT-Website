@@ -2637,3 +2637,58 @@ body.lightbox-open {
     max-width: 420px;
     line-height: 1.8;
 }
+
+/* ===== MOBILE NAVIGATION FIX ===== */
+@media (max-width: 1100px) {
+    .header .nav-container {
+        height: 72px;
+        min-height: 72px;
+    }
+
+    .header .menu-toggle {
+        display: block;
+        z-index: 1002;
+    }
+
+    /* Hide menu until hamburger button is clicked */
+    .header .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 0;
+        margin: 0;
+        padding: 12px 5% 22px;
+        background: #ffffff;
+        border-top: 1px solid #e8edf2;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+        max-height: calc(100dvh - 72px);
+        overflow-y: auto;
+        z-index: 1001;
+    }
+
+    /* Show menu only when opened */
+    .header .navigation.active {
+        display: flex;
+    }
+
+    .header .navigation a {
+        padding: 13px 5px;
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .header .navigation .nav-contact {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .header .language-toggle {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
